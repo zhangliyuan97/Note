@@ -28,6 +28,6 @@ GAT模型可以有效的适用于基于图的归纳学习问题和转导学习�
 
 #### 为什么GAT适用于inductive任务？
 
-GAT中重要的学习参数是 ![[公式]](https://www.zhihu.com/equation?tex=W) 与 ![[公式]](https://www.zhihu.com/equation?tex=a%28%5Ccdot%29) ，因为上述的逐顶点运算方式，这两个参数仅与1.1节阐述的顶点特征相关，与图的结构毫无关系。所以测试任务中改变图的结构，对于GAT影响并不大，只需要改变 ![[公式]](https://www.zhihu.com/equation?tex=%5Cmathcal%7BN%7D_i) ，重新计算即可。
+GAT中重要的学习参数是 ![[公式]](https://www.zhihu.com/equation?tex=W) 与 ![[公式]](https://www.zhihu.com/equation?tex=a%28%5Ccdot%29) ，因为上述的逐顶点运算方式，这两个参数仅与顶点特征相关，与图的结构毫无关系。所以测试任务中改变图的结构，对于GAT影响并不大，只需要改变 ![[公式]](https://www.zhihu.com/equation?tex=%5Cmathcal%7BN%7D_i) ，重新计算即可。
 
 与此相反的是，GCN是一种全图的计算方式，一次计算就更新全图的节点特征。学习的参数很大程度与图结构相关，这使得GCN在inductive任务上遇到困境。
